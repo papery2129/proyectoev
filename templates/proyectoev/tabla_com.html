@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% extends "proyectoev/base.html" %}
+
+{% load static %}
+{% block body_block %}
+<div class="container">
+    <h2>Comentarios:</h2>
+    {% if coment %}
+        <table class="table">
+            <thead>
+                <th>Fecha</th>
+                <th>Nombre</th>
+                <th>Email</th>
+                <th>Comentario</th>
+            </thead>
+            <tbody>
+                {% for con in coment %}
+                    <tr>
+                        <td>{{con.fecha}}</td>
+                        <td>{{con.nombre}}</td>
+                        <td>{{con.email}}</td>
+                        <td>{{con.text}}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>No hay mejoras constructivas :c</p>
+    {% endif %}
+</div>
+{% endblock %}
