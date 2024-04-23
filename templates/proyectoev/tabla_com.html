@@ -4,22 +4,24 @@
 {% load static %}
 {% block body_block %}
 <div class="container">
-    <h2>Comentarios:</h2>
+<br>
     {% if coment %}
-        <table class="table" >
+        <table class="table table-dark" >
             <thead>
-                <th>Fecha</th>
-                <th>Nombre</th>
-                <th>Email</th>
-                <th>Comentario</th>
+                <tr class="table-dark">
+                    <th class="table-dark">Fecha</th>
+                    <th class="table-dark">Nombre</th>
+                    <th class="table-dark">Email</th>
+                    <th class="table-dark">Comentario</th>
+                </tr>
             </thead>
             <tbody>
                 {% for con in coment %}
-                    <tr>
-                        <td>{{con.fecha}}</td>
-                        <td>{{con.nombre}}</td>
-                        <td>{{con.email}}</td>
-                        <td>{{con.text}}</td>
+                    <tr class="table-dark">
+                        <td class="table-dark">{{con.fecha}}</td>
+                        <td class="table-dark">{{con.nombre}}</td>
+                        <td class="table-dark">{{con.email}}</td>
+                        <td class="table-dark">{{con.text}}</td>
                     </tr>
                 {% endfor %}
             </tbody>
