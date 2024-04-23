@@ -40,3 +40,6 @@ def tabla(request):
 
 def acerca(request):
     return render(request, 'proyectoev/acerca.html')
+
+def seg(request):
+    return render(request, 'proyectoev/seguns.html')
